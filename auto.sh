@@ -1,4 +1,4 @@
-#!/bin/bash
+#!sh
 
 # 指定目录和Markdown文件名
 target_directory="doc/content"
