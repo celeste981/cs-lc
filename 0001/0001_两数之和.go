@@ -4,14 +4,13 @@ package twoSum
 // leetcode submit region begin(Prohibit modification and deletion)
 func twoSum(nums []int, target int) []int {
 	hashMap := make(map[int]int)
-
-	for idx, num := range nums {
-		if idx2, ok := hashMap[target-num]; ok {
-			return []int{idx2, idx}
+	for i, num := range nums {
+		leftPart := target - num
+		if idx, ok := hashMap[leftPart]; ok {
+			return []int{idx, i}
 		}
-		hashMap[num] = idx
+		hashMap[num] = i
 	}
-
 	return nil
 }
 
